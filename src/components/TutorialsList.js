@@ -22,6 +22,7 @@ const TutorialsList = (props) => {
     TutorialDataService.getAll()
       .then((response) => {
         setTutorials(response.data);
+        
       })
       .catch((e) => {
         console.log(e);
