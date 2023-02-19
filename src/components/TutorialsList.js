@@ -128,7 +128,36 @@ const TutorialsList = (props) => {
   });
 
   return (
+
     <div className="list row">
+      
+      <div className="form-group">
+            <label htmlFor="title">Title</label>
+            <input
+              type="text"
+              className="form-control"
+              id="title"
+              required
+              value=""
+              onChange=""
+              name="title"
+            />
+          </div><div>&nbsp;</div>
+
+          <div className="form-group">
+            <label htmlFor="description">Description</label>
+            <input
+              type="text"
+              className="form-control"
+              id="description"
+              required
+              value=""
+              onChange=""
+              name="description"
+            />
+          </div>
+      
+
       <div className="col-md-8">
         <div className="input-group mb-3">
           <input

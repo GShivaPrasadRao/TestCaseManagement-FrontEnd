@@ -1,5 +1,6 @@
 .list .action {
   cursor: pointer;
+  max-width: 1500px;
 }
 
 .submit-form {
@@ -11,3 +12,4 @@
   max-width: 300px;
   margin: auto;
 }
+

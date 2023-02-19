@@ -9,22 +9,37 @@ import AddTutorial from "./components/AddTutorial";
 import Tutorial from "./components/Tutorial";
 import TutorialsList from "./components/TutorialsList";
 
+import AddTestCases from "./components/AddTestCases";
+import TestCase from "./components/TestCase";
+import TestCaseList from "./components/TestCaseList";
+
 function App() {
   return (
     <div>
       <nav className="navbar navbar-expand navbar-dark bg-dark">
         <a href="/tutorials" className="navbar-brand">
-          bezKoder
+          Build techknowledge
         </a>
         <div className="navbar-nav mr-auto">
           <li className="nav-item">
             <Link to={"/tutorials"} className="nav-link">
-              Tutorials
+              TutorialsList
             </Link>
           </li>
           <li className="nav-item">
-            <Link to={"/add"} className="nav-link">
-              Add
+            <Link to={"/addTutorial"} className="nav-link">
+              AddTutorial
+            </Link>
+          </li>
+        
+          <li className="nav-item">
+            <Link to={"/testcases"} className="nav-link">
+              TestCases List
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to={"/addTestCase"} className="nav-link">
+              AddTestCase
             </Link>
           </li>
         </div>
@@ -33,8 +48,14 @@ function App() {
       <div className="container mt-3">
         <Switch>
           <Route exact path={["/", "/tutorials"]} component={TutorialsList} />
-          <Route exact path="/add" component={AddTutorial} />
+          <Route exact path="/addTutorial" component={AddTutorial} />
           <Route path="/tutorials/:id" component={Tutorial} />
+          <Route exact path={["/", "/testcases"]} component={TestCaseList} />
+          <Route exact path="/addTestCase" component={AddTestCases} />
+          <Route path="/testcases/:id" component={TestCase} />
+
+
+
         </Switch>
       </div>
     </div>
